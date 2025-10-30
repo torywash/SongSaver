@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Song Saver</title>
+</head>
+<body>
+    <span id="dark-mode" onclick="darkmode()"><h1>Song Saver</h1></span>
+    <div class="container">
+        <h2>Save Your Favorite Songs</h2>
+        <div class="in-container">
+            <form id="song-form">
+                <input type="text" id="songName" placeholder="Song Name" required>
+                <input type="text" id="songArtist" placeholder="Song Artist" required>
+                <input type="text" id="songReview" placeholder="Why Do You Like It?" required>
+                <button type="submit" id="saveSong">Save Song</button>
+            </form>
+        </div>
+        <div class="in-container">
+            <h2 id="song-total">0 Songs</h2>
+            <div id="song-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

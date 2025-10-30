@@ -1,0 +1,156 @@
+/* Claude used for debugging */
+/* dark mode */
+body.dark-mode {
+    --title-text: #f2f2f2;
+    --p-text: #cfcfcf; 
+    --btn: #3a3a3a;
+    --input: #2b2b2b;
+    --input-hover: #3f3f3f;
+    --slate: #1f1f1f;
+    --slate-border: #2a2a2a;
+    --diorite: #2a2a2a;
+    --diorite-border: #3a3a3a;
+    --stone: #3a3a3a;
+    --stone-border: #4a4a4a;
+    --tuff: #4a4a4a;
+    --tuff-border: #5b5b5b;
+    --deepslate: #474747;
+}
+
+
+/* colors! */
+:root {
+    --btn: #9e9e9e;
+    --input: #e7e7e7;
+    --input-hover: #bebebe;
+    --slate: #e6e6e6;
+    --slate-border: #d6d6d6;
+    --diorite: #d6d6d6;
+    --diorite-border: #c7c7c7;
+    --stone: #c7c7c7;
+    --stone-border: #acacac;
+    --tuff: #acacac;
+    --tuff-border: #979797;
+    --deepslate: #ffffff;
+}
+
+/* body and headers */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body, html {
+    background-color: var(--deepslate);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    margin: 0;
+    padding: 0;
+    min-height: 200vw;
+}
+
+h1 {
+    color: var(--title-text);
+    margin: 0 auto 25px;
+    background-color: var(--slate);
+    border: 1px solid var(--slate-border);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+    padding: 5px;
+}
+h2 {
+    color: var(--title-text);
+    font-style: italic;
+}
+
+/* containers and their children */
+.container, .in-container, #song-list {
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+    gap: 25px;
+}
+
+.container {
+    background-color: var(--slate);
+    border: 1px solid var(--slate-border);
+    align-items: center;
+    margin: 0 10%;
+}
+.in-container {
+    background-color: var(--diorite);
+    border: 1px solid var(--diorite-border);
+    align-items: center;
+    width: 65%;
+}
+#song-list {
+    background-color: var(--stone);
+    border: 1px solid var(--stone-border);
+    align-items: stretch;
+    width: 80%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    max-height: 275px;
+    min-height: 275px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--tuff-border) transparent;
+}
+
+#song-form {
+    width: 100%;
+    margin: auto;
+}
+
+.song {
+    display: flex;
+    flex-direction: column;
+    color: var(--p-text);
+    background-color: var(--tuff);
+    border: 1px solid var(--tuff-border);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+    padding: 5px;
+    border-radius: 10px;
+    gap: 0.75vw;
+}
+
+#songDisplay, #reviewDisplay {
+    font-size: 125%;
+}
+#reviewDisplay {
+    font-style: italic;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#dark-mode:hover {
+    cursor: pointer;
+}
+
+/* inputs and buttons */
+input, button {
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+    transition-duration: 200ms;
+    color: var(--p-text);
+    background-color: var(--input);
+    border: 1px solid var(--diorite-border);
+    font-size: 125%;
+}
+input:hover, input:focus {
+    outline: none;
+    background-color: var(--input-hover);
+    transition-duration: 300ms;
+}
+button:hover {
+    background-color: var(--btn);
+    transition-duration: 300ms;
+}
